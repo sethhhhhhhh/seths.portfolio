@@ -1,0 +1,57 @@
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+nav ul li {
+    float: left;
+    height: max-content;
+}
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav ul li:hover {
+    background-color: #555555;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #051324;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.navbar-header {
+    background-color: #051324;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+.navbar-header h1 {
+    margin: 0;
+}
+
+body {
+    background-image: url('https://wallpapercave.com/wp/wp4003025.jpg');
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+        margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: aliceblue;
+}
+ 
