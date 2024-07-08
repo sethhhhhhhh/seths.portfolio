@@ -1,0 +1,10 @@
+h1 {
+    font-family: monospace;
+    text-align: center;
+}
+
+button {
+    color: black;
+    background-color: antiquewhite;
+    size-adjust: 50px;
+}

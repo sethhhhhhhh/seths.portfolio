@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scissors Paper Stone</title>
+        <link rel="stylesheet" type="text/css" href="spsstyles.css">
+    </head>
+    <body>
+        <center>
+         <h1>Scissors Paper Stone</h1>
+          <h2>You</h2><br>
+          <button type="button" onclick="scissors()"><img src="logo.png"></button>
+          <button type="button" onclick="paper()"><img src="logo (2).png"></button>
+          <button type="button" onclick="stone()"><img src="logo (1).png"></button>
+         <fieldset>
+            <h2>Opponent</h2>
+            <p id="computerChoice"></p>
+            <div><label id = "message">Start by selecting any option!</label></div>
+            <p id = "results"></p>
+         </fieldset>
+        </center>
+        <script>
+            var myChoice = ""
+            var computerChoice = ""
+            var message = ""
+            var myScore = ""
+            var computerChoice = "" 
+
+            function checkWinner() {
+                if (myScore == 5) {
+                    document.getElementById("results").innerHTML = "You win!"
+                }
+                else if (computerScore == 5) {
+                    documet.getElementById("results").innerHTML = "You lose!"
+                }
+
+            }
+
+            function scissors() {
+                myChoice = "scissors";
+                opponentChoice();
+                results()
+                document.getElementById("message").innerHTML = message;
+            }
+            function paper() {
+                myChoice = "paper";
+                opponentChoice();
+                results()
+                document.getElementById("message").innerHTML = message;
+            }
+            function stone() {
+                myChoice = "stone";
+                opponentChoice();
+                results()
+                document.getElementById("message").innerHTML = message;
+            }
+
+            function opponentChoice() {
+                var randomNumber = Math.floor(Math.random() * 3)
+                if (randomNumber == 0) {
+                    computerChoice = "scissors"
+                }
+                else if (randomNumber == 1) {
+                    computerChoice = "paper"
+                }
+                else if (randomNumber == 2) {
+                    computerChoice = "stone"
+                }
+                document.getElementById("computerChoice").innerHTML = computerChoice;
+            }
+
+            function results() {
+                if (myChoice == computerChoice) {
+                    message = "Draw"
+                }
+                if (myChoice == "paper" && computerChoice == "stone") {
+                    message = "Win"
+                }
+                if (myChoice == "scissors" && computerChoice == "paper") {
+                    message = "Win"
+                }
+                if (myChoice == "stone" && computerChoice == "scissors") {
+                    message = "Win"
+                }
+                if (myChoice == "scissors" && computerChoice == "stone") {
+                    message = "Lose"
+                }
+                if (myChoice == "stone" && computerChoice == "paper") {
+                    message = "Lose"
+                }
+                if (myChoice == "paper" && computerChoice == "scissors") {
+                    message = "Lose"
+                }
+            }
+
+        </script>
+
+    </body>
+</html>

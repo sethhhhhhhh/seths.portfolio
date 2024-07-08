@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href="CalculatorStyles.css">
+    </head>
+    <body>
+        <h1>Welcome to the Calculator</h1>
+        <center>
+         <label id="display"></label><br>
+         <button type="button" id="one" onclick="clickOne()">1</button>
+         <button type="button" id="two" onclick="clickTwo()">2</button>
+         <button type="button" id="three" onclick="clickThree()">3</button>
+         <button type="button" id="plus" onclick="clickPlus()">+</button>
+         <br>
+         <button type="button" id="four" onclick="clickFour()">4</button>
+         <button type="button" id="five" onclick="clickFive()">5</button>
+         <button type="button" id="six" onclick="clickSix()">6</button>
+         <button type="button" id="minus" onclick="clickMinus()">-</button>
+         <br>
+         <button type="button" id="seven" onclick="clickSeven()">7</button>
+         <button type="button" id="eight" onclick="clickEight()">8</button>
+         <button type="button" id="nine" onclick="clickNine()">9</button>
+         <button type="button" id="times" onclick="clickTimes()">*</button>
+         <br>
+         <button type="button" id="clear" onclick="clickClear()">C</button>
+         <button type="button" id="zero" onclick="clickZero()">0</button>
+         <button type="button" id="equals" onclick="clickEquals()">=</button>
+         <button type="button" id="Divide" onclick="clickDivide()">/</button>
+        </center>
+
+        <script>
+            var expression = '';
+
+
+            function clickOne() {
+                expression = expression + "1";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            
+            function clickTwo() {
+                expression = expression + "2";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickThree() {
+                expression = expression + "3";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickPlus() {
+                expression = expression + "+";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickFour() {
+                expression = expression + "4";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickFive() {
+                expression = expression + "5";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickSix() {
+                expression = expression + "6";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickMinus() {
+                expression = expression + "-";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickSeven() {
+                expression = expression + "7";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickEight() {
+                expression = expression + "8";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickNine() {
+                expression = expression + "9";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickTimes() {
+                expression = expression + "*";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickZero() {
+                expression = expression + "0";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickDivide() {
+                expression = expression + "/";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickClear() {
+                expression = "";
+                document.getElementById("display").innerHTML = expression
+            }
+
+            function clickEquals() {
+                expression = eval(expression)
+                document.getElementById("display").innerHTML = expression
+            }
+        </script>
+    </body>
+</html>
